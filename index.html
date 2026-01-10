@@ -5,10 +5,7 @@
 </head>
 <body>
 <script>
- var iframe = document.createElement("iframe");
-  iframe.src = "http://ctf25.root-me.org/room";
-  iframe.style.display = "none";
-  document.body.appendChild(iframe);
+window.open("http://ctf25.root-me.org/room", "_blank");
   setTimeout(() => {  
         var ws = new WebSocket('ws://localhost/ws');
 
