@@ -5,7 +5,10 @@
 </head>
 <body>
 <script>
-        location.href = "http://localhost/room";
+ var iframe = document.createElement("iframe");
+  iframe.src = "http://ctf25.root-me.org/room";
+  iframe.style.display = "none";
+  document.body.appendChild(iframe);
   setTimeout(() => {  
         var ws = new WebSocket('ws://localhost/ws');
 
